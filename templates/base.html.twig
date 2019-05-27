@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+        {% endblock %}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="{{ asset('js/jQuery.min.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>
