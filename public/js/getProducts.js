@@ -1,5 +1,5 @@
-let questions = $('#lists');
-
+let questions = $('#questions');
+$('.submitButton').hide();
 function refreshSelects(){
     let selects = questions.find('select');
 
@@ -8,10 +8,10 @@ function refreshSelects(){
 
         // The selected option
         let selected = $(this).find('option').eq(this.selectedIndex);
+
         // Look up the data-connection attribute
         let connection = selected.data('connection');
 
-        let price = selected.data('price');
 
         // Removing the li containers that follow (if any)
         selected.closest('#questions li').nextAll().remove();
@@ -33,16 +33,14 @@ function fetchSelect(val){
     $.get('/devis/getProductsForm',{k:val},function(r){
         let connection, options;
         if(r.items[0].length === 0) {
-            refreshSelects();
             $('.submitButton').show();
+            refreshSelects();
 
             working = false;
         }else {
-            refreshSelects();
-            $('.submitButton').hide();
             $.each(r.items, function (key, value) {
 
-                if(value.parent == null){
+                if(value.parent === null){
                     connection = '';
                     if(value.name){
                         connection = 'data-connection="'+value.id+'"';
@@ -71,10 +69,11 @@ function fetchSelect(val){
 				</select>\
 				<span class="divider"></span>\
 			</li>').appendTo(questions);
-
+            $('.submitButton').hide();
             working = false;
         }
         refreshSelects();
+
     });
 
 }
