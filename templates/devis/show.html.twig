@@ -27,32 +27,106 @@
                 <th>DateValid</th>
                 <td>{{ devi.dateValid ? devi.dateValid|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+            <!--
             <tr>
                 <th>Products</th>
                 <td><ul>
-                        {% set test =0 %}
+                        {% set HT =0 %}
 
                         {% for pdts in devi.productForms %}
+
                             {{ (pdts.name.price * ((pdts.height * pdts.width)/100)) }}
-                            {% set test = test + (pdts.name.price * ((pdts.height * pdts.width)/100)) %}
+                            {% set HT = HT + (pdts.name.price * ((pdts.height * pdts.width)/100)) %}
                         <li>{{ pdts.name.name }} {{ pdts.width }} x {{ pdts.height }}cm</li>
                         {% endfor %}
                     </ul>
                 </td>
+            </tr>
             <tr>
                 <th>Attributes</th>
                 <td>
                     {% for pdts in devi.productForms %}
-                        {% for attr in pdts.attributes %}
-                        <li>{{ attr.name }}</li>
-                            {% set test = test + attr.price %}
+                    {% for pdt in pdts.attributes %}
+
+                        {{ pdt.name }}
+                        {% set HT = HT + (pdt.price * ((pdts.height * pdts.width)/100)) %}
+                    {% endfor %}
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th>Frais</th>
+                <td>
+                    {% for pdts in devi.productForms %}
+                        {% for frais in pdts.frais %}
+                        {{ frais.nom }}
+                            {% set HT = HT + frais.price %}
+                            {{ frais.price }}
                         {% endfor %}
                     {% endfor %}
                 </td>
             </tr>
+            <tr>
+                <th>HT</th>
+                <td>
+                    {{ HT }}
+                </td>
+            </tr>
+        <tr>
+            <th>TTC</th>
+            <td>
+                {% set ttc = HT * 1.085 %}
+                {{ ttc }}
+            </td>
+        </tr>
+            -->
         </tbody>
     </table>
-{{ test }}
+    <h1>Produits</h1>
+<table class="table">
+    <tr>
+        <th>Nom du produit</th>
+        <th>Dimensions</th>
+        <th>Qté</th>
+        <th>Frais</th>
+        <th>attributs</th>
+        <th>Prix HT</th>
+        <th>Prix TTC</th>
+    </tr>
+    {% set TotalPrice = 0 %}
+    {% for pdts in devi.productForms %}
+        {% set HT = 0 %}
+        {% set TTC = 0 %}
+        <tr>
+            <td>{{ pdts.name }}</td>
+            <td>{{ pdts.width }} x {{ pdts.height }} (cm)</td>
+            <td>{{ pdts.qte }}</td>
+            <td>{% for frais in pdts.frais %}
+                    <span>{{ frais.nom }}</span>
+                {% endfor %}</td>
+            <td>
+                {% for attr in pdts.attributes %}
+                    <span>{{ attr.name }}</span>
+                {% endfor %}
+            </td>
+            <td>
+
+                {% for attr in pdts.attributes %}
+                    {% set HT = HT + attr.price * ((pdts.width*pdts.height)/1000) %}
+                {% endfor %}
+                {% set HT = HT + pdts.name.price * ((pdts.width*pdts.height)/1000) %}
+                {% set HT = HT* pdts.qte %}
+                {{ HT|round(2) }} €
+            </td>
+            <td>
+                {% set TTC = HT * 1.085 %}
+                {{ TTC|round(2) }} €
+            </td>
+        </tr>
+        {% set TotalPrice = TotalPrice + TTC%}
+    {% endfor %}
+</table>
+{{ TotalPrice|round(2) }} €
     <a href="{{ path('devis_index') }}">back to list</a>
 
     <a href="{{ path('devis_edit', {'id': devi.id}) }}">edit</a>

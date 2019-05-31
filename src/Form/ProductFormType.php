@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Attributes;
 use App\Entity\Devis;
+use App\Entity\Frais;
 use App\Entity\ProductForm;
 use App\Entity\Products;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -34,6 +35,15 @@ class ProductFormType extends AbstractType
                 // uses the User.username property as the visible option string
                 'choice_label' => 'name',
                 'multiple'=>true])
+            ->add('frais', EntityType::class,  ['required'=>false,'placeholder' => 'Ajouter un frais',
+                // looks for choices from this entity
+                'class' => Frais::class,
+                // uses the User.username property as the visible option string
+                'choice_label' => 'nom',
+                'multiple'=>true])
+            ->add('heureFraisMaquette')
+            ->add('heureFraisPose')
+            ->add('qte')
         ;
     }
 

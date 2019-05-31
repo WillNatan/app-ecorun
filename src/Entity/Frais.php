@@ -7,9 +7,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\AttributesRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\FraisRepository")
  */
-class Attributes
+class Frais
 {
     /**
      * @ORM\Id()
@@ -21,7 +21,7 @@ class Attributes
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $nom;
 
     /**
      * @ORM\Column(type="float")
@@ -29,30 +29,30 @@ class Attributes
     private $price;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\ProductForm", mappedBy="attributes", fetch="EAGER", orphanRemoval=true)
+     * @ORM\ManyToMany(targetEntity="App\Entity\ProductForm", mappedBy="frais", fetch="EAGER", orphanRemoval=true)
      */
-    private $linkedproduct;
 
-
+    private $product;
 
     public function __construct()
     {
-        $this->linkedproduct = new ArrayCollection();
+        $this->product = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getNom(): ?string
     {
-        return $this->name;
+        return $this->nom;
     }
 
-    public function setName(string $name): self
+    public function setNom(string $nom): self
     {
-        $this->name = $name;
+        $this->nom = $nom;
 
         return $this;
     }
@@ -72,27 +72,28 @@ class Attributes
     /**
      * @return Collection|ProductForm[]
      */
-    public function getLinkedproduct(): Collection
+    public function getProduct(): Collection
     {
-        return $this->linkedproduct;
+        return $this->product;
     }
 
-    public function addLinkedproduct(ProductForm $linkedproduct): self
+    public function addProduct(ProductForm $product): self
     {
-        if (!$this->linkedproduct->contains($linkedproduct)) {
-            $this->linkedproduct[] = $linkedproduct;
+        if (!$this->product->contains($product)) {
+            $this->product[] = $product;
+            $product->addFrai($this);
         }
 
         return $this;
     }
 
-    public function removeLinkedproduct(ProductForm $linkedproduct): self
+    public function removeProduct(ProductForm $product): self
     {
-        if ($this->linkedproduct->contains($linkedproduct)) {
-            $this->linkedproduct->removeElement($linkedproduct);
+        if ($this->product->contains($product)) {
+            $this->product->removeElement($product);
+            $product->removeFrai($this);
         }
 
         return $this;
     }
-    
 }

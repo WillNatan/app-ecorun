@@ -30,10 +30,7 @@ class ProductForm
      */
     private $name;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Attributes", mappedBy="product", cascade={"all"})
-     */
-    private $attributes;
+
 
     /**
      * @ORM\Column(type="float")
@@ -45,10 +42,37 @@ class ProductForm
      */
     private $width;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Attributes", inversedBy="linkedproduct", cascade={"persist"}, orphanRemoval=true)
+     * @ORM\JoinTable(name="attributes_product_form")
+     */
+    private $attributes;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Frais", inversedBy="product", cascade={"persist"}, orphanRemoval=true)
+     * @ORM\JoinTable(name="frais_product")
+     */
+    private $frais;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $heureFraisPose;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $heureFraisMaquette;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $qte;
+
     public function __construct()
     {
-
         $this->attributes = new ArrayCollection();
+        $this->frais = new ArrayCollection();
     }
 
 
@@ -117,7 +141,7 @@ class ProductForm
     {
         if (!$this->attributes->contains($attribute)) {
             $this->attributes[] = $attribute;
-            $attribute->setProduct($this);
+            $attribute->addLinkedproduct($this);
         }
 
         return $this;
@@ -127,11 +151,70 @@ class ProductForm
     {
         if ($this->attributes->contains($attribute)) {
             $this->attributes->removeElement($attribute);
-            // set the owning side to null (unless already changed)
-            if ($attribute->getProduct() === $this) {
-                $attribute->setProduct(null);
-            }
+            $attribute->removeLinkedproduct($this);
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Frais[]
+     */
+    public function getFrais(): Collection
+    {
+        return $this->frais;
+    }
+
+    public function addFrai(Frais $frai): self
+    {
+        if (!$this->frais->contains($frai)) {
+            $this->frais[] = $frai;
+        }
+
+        return $this;
+    }
+
+    public function removeFrai(Frais $frai): self
+    {
+        if ($this->frais->contains($frai)) {
+            $this->frais->removeElement($frai);
+        }
+
+        return $this;
+    }
+
+    public function getHeureFraisPose(): ?float
+    {
+        return $this->heureFraisPose;
+    }
+
+    public function setHeureFraisPose(?float $heureFraisPose): self
+    {
+        $this->heureFraisPose = $heureFraisPose;
+
+        return $this;
+    }
+
+    public function getHeureFraisMaquette(): ?float
+    {
+        return $this->heureFraisMaquette;
+    }
+
+    public function setHeureFraisMaquette(?float $heureFraisMaquette): self
+    {
+        $this->heureFraisMaquette = $heureFraisMaquette;
+
+        return $this;
+    }
+
+    public function getQte(): ?int
+    {
+        return $this->qte;
+    }
+
+    public function setQte(int $qte): self
+    {
+        $this->qte = $qte;
 
         return $this;
     }

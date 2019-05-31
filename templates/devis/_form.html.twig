@@ -6,13 +6,19 @@
 
 {{ form_label(form.modeReglement) }}
 {{ form_widget(form.modeReglement) }}
+{{ form_label(form.jobhour) }}
+{{ form_widget(form.jobhour) }}
 <ul class="tags" data-prototype="{{ form_widget(form.productForms.vars.prototype)|e('html_attr') }}">
     {{ form_label(form.productForms) }}
 {% for tag in form.productForms %}
     <li>{{ form_row(tag.name) }}</li>
     <li>{{ form_row(tag.height) }}</li>
     <li>{{ form_row(tag.width) }}</li>
+    <li>{{ form_row(tag.qte) }}</li>
     <li>{{ form_row(tag.attributes) }}</li>
+    <li>{{ form_row(tag.frais) }}</li>
+    <li>{{ form_row(tag.heureFraisPose) }}</li>
+    <li>{{ form_row(tag.heureFraisMaquette) }}</li>
 {% endfor %}
 </ul>
 
