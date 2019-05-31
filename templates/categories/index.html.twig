@@ -19,7 +19,7 @@
             <tr>
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
-                <td>{% for children in category.children %}{{ children.name }}{% endfor %}</td>
+                <td>{% for children in category.children %}{{ children.name }}{% if loop.index %}{% if loop.last %}{% else %},{% endif %}{% endif %}{% endfor %}</td>
                 <td>
                     <a href="{{ path('categories_show', {'id': category.id}) }}">show</a>
                     <a href="{{ path('categories_edit', {'id': category.id}) }}">edit</a>

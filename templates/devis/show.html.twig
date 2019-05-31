@@ -27,9 +27,32 @@
                 <th>DateValid</th>
                 <td>{{ devi.dateValid ? devi.dateValid|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+            <tr>
+                <th>Products</th>
+                <td><ul>
+                        {% set test =0 %}
+
+                        {% for pdts in devi.productForms %}
+                            {{ (pdts.name.price * ((pdts.height * pdts.width)/100)) }}
+                            {% set test = test + (pdts.name.price * ((pdts.height * pdts.width)/100)) %}
+                        <li>{{ pdts.name.name }} {{ pdts.width }} x {{ pdts.height }}cm</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            <tr>
+                <th>Attributes</th>
+                <td>
+                    {% for pdts in devi.productForms %}
+                        {% for attr in pdts.attributes %}
+                        <li>{{ attr.name }}</li>
+                            {% set test = test + attr.price %}
+                        {% endfor %}
+                    {% endfor %}
+                </td>
+            </tr>
         </tbody>
     </table>
-
+{{ test }}
     <a href="{{ path('devis_index') }}">back to list</a>
 
     <a href="{{ path('devis_edit', {'id': devi.id}) }}">edit</a>

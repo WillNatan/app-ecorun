@@ -30,9 +30,30 @@ class Products
     private $price;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductForm", mappedBy="name", cascade={"all"})
+     */
+    private $pdtForm;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="products")
      */
     private $category;
+
+
+
+    public function __toString()
+    {
+        return (string) $this->getName();
+    }
+
+    public function __construct()
+    {
+        $this->pdtForm = new ArrayCollection();
+
+    }
+
+
+
 
 
     public function getId(): ?int
@@ -75,4 +96,37 @@ class Products
 
         return $this;
     }
+
+    /**
+     * @return Collection|ProductForm[]
+     */
+    public function getPdtForm(): Collection
+    {
+        return $this->pdtForm;
+    }
+
+    public function addPdtForm(ProductForm $pdtForm): self
+    {
+        if (!$this->pdtForm->contains($pdtForm)) {
+            $this->pdtForm[] = $pdtForm;
+            $pdtForm->setName($this);
+        }
+
+        return $this;
+    }
+
+    public function removePdtForm(ProductForm $pdtForm): self
+    {
+        if ($this->pdtForm->contains($pdtForm)) {
+            $this->pdtForm->removeElement($pdtForm);
+            // set the owning side to null (unless already changed)
+            if ($pdtForm->getName() === $this) {
+                $pdtForm->setName(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 }

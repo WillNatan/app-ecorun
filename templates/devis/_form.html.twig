@@ -1,4 +1,21 @@
+
+
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+{{ form_label(form.numDevis) }}
+    {{ form_widget(form.numDevis) }}
+
+{{ form_label(form.modeReglement) }}
+{{ form_widget(form.modeReglement) }}
+<ul class="tags" data-prototype="{{ form_widget(form.productForms.vars.prototype)|e('html_attr') }}">
+    {{ form_label(form.productForms) }}
+{% for tag in form.productForms %}
+    <li>{{ form_row(tag.name) }}</li>
+    <li>{{ form_row(tag.height) }}</li>
+    <li>{{ form_row(tag.width) }}</li>
+    <li>{{ form_row(tag.attributes) }}</li>
+{% endfor %}
+</ul>
+
+
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

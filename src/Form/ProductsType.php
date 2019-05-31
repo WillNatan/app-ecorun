@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Categories;
 use App\Entity\Products;
+use App\Repository\CategoriesRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,7 +20,11 @@ class ProductsType extends AbstractType
             ->add('category', EntityType::class,  ['placeholder' => 'Catégorie',
                 // looks for choices from this entity
                 'class' => Categories::class,
-
+                'query_builder' => function (CategoriesRepository $er) {
+                    return $er->createQueryBuilder('u')
+                        ->where('u.parent = :parent')
+                    ->setParameter('parent', !null);
+                },
                 // uses the User.username property as the visible option string
                 'choice_label' => 'name'])
         ;

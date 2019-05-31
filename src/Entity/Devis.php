@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,7 +24,7 @@ class Devis
     private $modeReglement;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $numDevis;
 
@@ -41,10 +43,22 @@ class Devis
      */
     private $customer;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductForm", mappedBy="Devis", cascade={"all"})
+     */
+    private $productForms;
+
+    public function __construct()
+    {
+        $this->productForms = new ArrayCollection();
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
     }
+
 
     public function getModeReglement(): ?string
     {
@@ -58,12 +72,12 @@ class Devis
         return $this;
     }
 
-    public function getNumDevis(): ?int
+    public function getNumDevis(): ?string
     {
         return $this->numDevis;
     }
 
-    public function setNumDevis(int $numDevis): self
+    public function setNumDevis(string $numDevis): self
     {
         $this->numDevis = $numDevis;
 
@@ -102,6 +116,37 @@ class Devis
     public function setCustomer(?Customers $customer): self
     {
         $this->customer = $customer;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ProductForm[]
+     */
+    public function getProductForms(): Collection
+    {
+        return $this->productForms;
+    }
+
+    public function addProductForm(ProductForm $productForm): self
+    {
+        if (!$this->productForms->contains($productForm)) {
+            $this->productForms[] = $productForm;
+            $productForm->setDevis($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProductForm(ProductForm $productForm): self
+    {
+        if ($this->productForms->contains($productForm)) {
+            $this->productForms->removeElement($productForm);
+            // set the owning side to null (unless already changed)
+            if ($productForm->getDevis() === $this) {
+                $productForm->setDevis(null);
+            }
+        }
 
         return $this;
     }

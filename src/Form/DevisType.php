@@ -6,6 +6,9 @@ use App\Entity\Customers;
 use App\Entity\Devis;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,16 +17,14 @@ class DevisType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('modeReglement')
-            ->add('numDevis')
-            ->add('dateCrea')
-            ->add('dateValid')
-            ->add('customer', EntityType::class, [
-                // looks for choices from this entity
-                'class' => Customers::class,
-
-                // uses the User.username property as the visible option string
-                'choice_label' => 'name'])
+            ->add('modeReglement', TextType::class)
+            ->add('numDevis', TextType::class, ['disabled'=>true])
+            ->add('productForms',CollectionType::class, [
+        'entry_type' => ProductFormType::class,
+        'entry_options' => ['label' => false],
+                'allow_add' => true,
+                'by_reference' => false,
+    ])
         ;
     }
 

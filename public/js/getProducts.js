@@ -1,81 +1,59 @@
-let questions = $('#questions');
-$('.submitButton').hide();
-function refreshSelects(){
-    let selects = questions.find('select');
+var $collectionHolder;
 
-    // Listen for changes
-    selects.unbind('change').bind('change',function(){
+// setup an "add a tag" link
+var $addTagButton = $('<button type="button" class="add_tag_link">Add a tag</button>');
+var $newLinkLi = $('<li></li>').append($addTagButton);
 
-        // The selected option
-        let selected = $(this).find('option').eq(this.selectedIndex);
+jQuery(document).ready(function() {
+    // Get the ul that holds the collection of tags
+    $collectionHolder = $('ul.tags');
 
-        // Look up the data-connection attribute
-        let connection = selected.data('connection');
+    // add the "add a tag" anchor and li to the tags ul
+    $collectionHolder.append($newLinkLi);
 
+    // count the current form inputs we have (e.g. 2), use that as the new
+    // index when inserting a new item (e.g. 2)
+    $collectionHolder.data('index', $collectionHolder.find(':input').length);
 
-        // Removing the li containers that follow (if any)
-        selected.closest('#questions li').nextAll().remove();
-
-        if(connection){
-            fetchSelect(connection);
-        }
+    $addTagButton.on('click', function(e) {
+        // add a new tag form (see next code block)
+        addTagForm($collectionHolder, $newLinkLi);
     });
-}
-let working = false;
+});
 
-function fetchSelect(val){
+function addTagForm($collectionHolder, $newLinkLi) {
+    // Get the data-prototype explained earlier
+    var prototype = $collectionHolder.data('prototype');
 
-    if(working){
-        return false;
-    }
-    working = true;
+    // get the new index
+    var index = $collectionHolder.data('index');
 
-    $.get('/devis/getProductsForm',{k:val},function(r){
-        let connection, options;
-        if(r.items[0].length === 0) {
-            $('.submitButton').show();
-            refreshSelects();
+    var newForm = prototype;
+    // You need this only if you didn't set 'label' => false in your tags field in TaskType
+    // Replace '__name__label__' in the prototype's HTML to
+    // instead be a number based on how many items we have
+    // newForm = newForm.replace(/__name__label__/g, index);
 
-            working = false;
-        }else {
-            $.each(r.items, function (key, value) {
+    // Replace '__name__' in the prototype's HTML to
+    // instead be a number based on how many items we have
+    newForm = newForm.replace(/__name__/g, index);
 
-                if(value.parent === null){
-                    connection = '';
-                    if(value.name){
-                        connection = 'data-connection="'+value.id+'"';
-                        options+= '<option value="'+key+'" '+connection+'>'+value.name+'</option>';
-                    }
+    // increase the index with one for the next item
+    $collectionHolder.data('index', index + 1);
 
-                }else{
-                    $.each(r.items, function (key, value) {
-                        $.each(value, function (key, value) {
-                                connection = 'data-connection="'+value.id+'"';
-                                options+= '<option value="'+key+'" '+connection+'>'+value.name+'</option>';
+    // Display the form in the page in an li, before the "Add a tag" link li
+    var $newFormLi = $('<li></li>').append(newForm);
+    $newLinkLi.before($newFormLi);
 
-
-                        })
-                    });
-                }
-
-
-
-            });
-            options = '<option></option>'+options;
-            $('<li>\
-				<p>Choisissez votre produit</p>\
-				<select data-placeholder="Votre produit" class="selectors form-control">\
-					'+ options +'\
-				</select>\
-				<span class="divider"></span>\
-			</li>').appendTo(questions);
-            $('.submitButton').hide();
-            working = false;
-        }
-        refreshSelects();
-
-    });
-
+    addTagFormDeleteLink($newFormLi);
 }
 
-fetchSelect('firstList');
+function addTagFormDeleteLink($tagFormLi) {
+    var $removeFormButton = $('<button type="button">Delete this tag</button>');
+    $tagFormLi.append($removeFormButton);
+
+    $removeFormButton.on('click', function(e) {
+        // remove the li for the tag form
+        $tagFormLi.remove();
+    });
+}

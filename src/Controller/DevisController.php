@@ -2,11 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Attributes;
 use App\Entity\Devis;
+use App\Entity\ProductForm;
 use App\Entity\SelectBox;
 use App\Form\DevisType;
 use App\Repository\CategoriesRepository;
 use App\Repository\DevisRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,54 +36,45 @@ class DevisController extends AbstractController
     }
 
     /**
-     * @Route("/getProductsForm", name="products_form", methods={"GET"})
-     */
-    public function productForm(Request $request,CategoriesRepository $categoriesRepository): Response
-    {
-        $selectBox = new SelectBox();
-        $parent = $request->get('k');
-        $encoders = [new XmlEncoder(), new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
-
-        $serializer = new Serializer($normalizers, $encoders);
-
-
-        if ($parent == 'firstList'){
-            $allCategories = $categoriesRepository->findAll();
-            foreach($allCategories as $category){
-                if(is_null($category->getParent())){
-                    $selectBox->addItem($category);
-                }
-            }
-        }else{
-
-            $allCategories = $categoriesRepository->findBy(['id'=>$parent]);
-            foreach ($allCategories as $category){
-                $selectBox->addItem($category->getChildren());
-            }
-        }
-        $json = $serializer->serialize($selectBox, 'json', [
-            'circular_reference_handler' => function ($allCategories) {
-                return $allCategories->getId();
-            }
-        ]);
-
-        $response = new Response($json);
-        $response->headers->set('Content-Type', 'application/json');
-        return $response;
-    }
-
-    /**
      * @Route("/new", name="devis_new", methods={"GET","POST"})
      */
-    public function new(Request $request ): Response
+    public function new(Request $request, DevisRepository $devisRepository ): Response
     {
         $devi = new Devis();
+        $pdts = new ProductForm();
+        $devi->addProductForm($pdts);
+        $entityManager = $this->getDoctrine()->getManager();
+        $originalTags = new ArrayCollection();
+        $originalAttr = new ArrayCollection();
+
+
+
+        foreach ($devi->getProductForms() as $pdt){
+            $originalTags->add($pdt);
+        }
+
+
+        if(empty($devisRepository->findAll())){
+            $devi->setNumDevis(date('mYd'). 0);
+        }
+        else{
+            $lastDevis = $devisRepository->findOneBy([],['numDevis'=>'DESC'])->getNumDevis();
+            $devi->setNumDevis(
+                $lastDevis+1
+            );
+        }
         $form = $this->createForm(DevisType::class, $devi);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
+            foreach($originalTags as $pdt){
+                if($devi->getProductForms()->contains($pdt) === false){
+                    $entityManager->remove($pdt);
+                }
+            }
+
+            $devi->setDateCrea(new \DateTime());
+            $devi->setDateValid(new \DateTime('+1 month'));
             $entityManager->persist($devi);
             $entityManager->flush();
 
