@@ -91,11 +91,12 @@
     </div>
     <h1>Commentaires</h1>
     {% for com in devi.commentaires %}
-        <div class="card">
+        <div class="card mb-3">
             <div class="card-header">
-                {{ com.date }}
+                {{ com.date ? com.date|date('Y-m-d H:i') : '' }}
             </div>
             <div class="card-body">
+                <p>Commentaire</p>
                 {{ com.text }}
             </div>
         </div>
@@ -104,12 +105,13 @@
         <p>Aucun commentaire</p>
     {% endfor %}
     <h3>Ajouter un commentaire</h3>
-    <form action="">
+    <form action="{{ path('postCom') }}" method="post">
         <div class="form-group">
-            <textarea name="" id="" class="com form-control" cols="30" rows="10"></textarea>
+            <input type="hidden" name="comId" value="{{ devi.id }}">
+            <textarea name="com" class="com form-control" cols="30" rows="10"></textarea>
         </div>
         <div class="form-group">
-            <input type="button" value="Envoyer" class="submitPost btn btn-success">
+            <input type="submit" value="Envoyer" class="submitPost btn btn-success">
         </div>
     </form>
 <div class="d-flex justify-content-center align-items-end">
@@ -121,15 +123,4 @@
 
 
 
-{% endblock %}
-
-{% block javascripts %}
-    <script>
-        $('.submitPost').click(function () {
-            let com = $('.com').val();
-            $.post('PostCom',{com:com}, function (success) {
-                console.log(success)
-            })
-        })
-    </script>
 {% endblock %}

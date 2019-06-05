@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Attributes;
+use App\Entity\Commentaires;
 use App\Entity\Devis;
 use App\Entity\ProductForm;
 use App\Entity\SelectBox;
@@ -34,6 +35,28 @@ class DevisController extends AbstractController
         return $this->render('devis/index.html.twig', [
             'devis' => $devisRepository->findAll(),
         ]);
+    }
+
+    /**
+     * @Route("/PostCom", name="postCom", methods={"GET","POST"})
+     */
+    public function postCom(Request $request,DevisRepository $devisRepository, CommentairesRepository $commentairesRepository): Response
+    {
+       $com = $request->get('com');
+        $devisID = $request->get('comId');
+       $currentDevis =  $devisRepository->findOneBy(['id'=>$devisID]);
+
+       if($request->isMethod('post')){
+           $commentaire = new Commentaires();
+           $commentaire->setDate(new \Datetime());
+           $commentaire->setText($com);
+           $commentaire->setDevis($currentDevis);
+           $em = $this->getDoctrine()->getManager();
+           $em->persist($commentaire);
+           $em->flush();
+
+           return $this->redirectToRoute('devis_show', ['id'=>$devisID]);
+       }
     }
 
 

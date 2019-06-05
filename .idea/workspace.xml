@@ -2,87 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="931fb782-62cc-4a3d-bfae-0f3ffbd0a9c4" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sass/devis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/getProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/getProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BlaController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BloController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/devis.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/devis.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DevisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DevisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FraisController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SocieteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SocieteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Bla.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Blo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Devis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Devis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Frais.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ProductForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProductForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AttributesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AttributesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/BlaType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/BloType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoriesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoriesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CustomersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CustomersType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/DevisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DevisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/FraisType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SocieteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SocieteType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BlaRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BloRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/FraisRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/attributes/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/attributes/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/attributes/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/attributes/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/attributes/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/attributes/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bla/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bla/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bla/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bla/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bla/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bla/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blo/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blo/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blo/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blo/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blo/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blo/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devis/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devis/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devis/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devis/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devis/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/devis/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frais/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frais/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frais/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frais/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frais/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frais/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/societe/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/societe/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/societe/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/societe/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/societe/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/societe/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/show.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,19 +21,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+              <folding>
+                <element signature="e#34#60#0#PHP" expanded="true" />
+                <element signature="e#1837#1849#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/devis/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="603">
-              <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
+              <folding>
+                <element signature="e#3141#3148#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
+        <entry file="file://$PROJECT_DIR$/public/css/devis.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="595">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -130,7 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Form/ProductFormType.php" />
         <option value="$PROJECT_DIR$/public/sass/devis.scss" />
         <option value="$PROJECT_DIR$/templates/devis/productsform.html.twig" />
@@ -179,8 +116,9 @@
         <option value="$PROJECT_DIR$/templates/societe/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Commentaires.php" />
         <option value="$PROJECT_DIR$/templates/societe/show.html.twig" />
-        <option value="$PROJECT_DIR$/templates/devis/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/DevisController.php" />
+        <option value="$PROJECT_DIR$/templates/devis/show.html.twig" />
+        <option value="$PROJECT_DIR$/public/css/devis.css" />
       </list>
     </option>
   </component>
@@ -313,7 +251,18 @@
             <path>
               <item name="app-ecorun" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-ecorun" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-ecorun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-ecorun" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-ecorun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-ecorun" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,7 +320,7 @@
       <workItem from="1559538608473" duration="18227000" />
       <workItem from="1559626129674" duration="1200000" />
       <workItem from="1559635121760" duration="1213000" />
-      <workItem from="1559729376194" duration="6923000" />
+      <workItem from="1559729376194" duration="8737000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1559278136252</created>
@@ -391,7 +340,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69045000" />
+    <option name="totallyTimeSpent" value="70859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -449,13 +398,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Form/ProductFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/sass/devis.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -822,17 +764,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/devis/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+        <state relative-caret-position="374">
+          <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+          <folding>
+            <element signature="e#34#60#0#PHP" expanded="true" />
+            <element signature="e#1837#1849#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
+    <entry file="file://$PROJECT_DIR$/templates/devis/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="603">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="e#3141#3148#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/devis.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
         </state>
       </provider>
     </entry>
