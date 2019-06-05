@@ -2,20 +2,56 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/devis.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="{{ asset('img/ecoworks.png') }}" width="50" height="50" alt=""></a>
+         <span class="d-sm-none">{% block navbarTitle %}Accueil{% endblock %}</span>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('home') }}">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('devis_index') }}">Devis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('customers_index') }}">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('products_index') }}">Produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('categories_index') }}">Catégories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('attributes_index') }}">Attributs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('societe_index') }}">Société</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <div class="container main-wrapper mt-5">
             {% block body %}
 
             {% endblock %}
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="{{ asset('js/jQuery.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
         <script src="{{ asset('js/bootstrap.js') }}"></script>
-        <script src="{{ asset('js/jQuery.min.js') }}"></script>
         {% block javascripts %}{% endblock %}
 
     </body>

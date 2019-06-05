@@ -1,27 +1,20 @@
 
 
 {{ form_start(form) }}
-{{ form_label(form.numDevis) }}
-    {{ form_widget(form.numDevis) }}
-
-{{ form_label(form.modeReglement) }}
-{{ form_widget(form.modeReglement) }}
-{{ form_label(form.jobhour) }}
-{{ form_widget(form.jobhour) }}
-<ul class="tags" data-prototype="{{ form_widget(form.productForms.vars.prototype)|e('html_attr') }}">
-    {{ form_label(form.productForms) }}
-{% for tag in form.productForms %}
-    <li>{{ form_row(tag.name) }}</li>
-    <li>{{ form_row(tag.height) }}</li>
-    <li>{{ form_row(tag.width) }}</li>
-    <li>{{ form_row(tag.qte) }}</li>
-    <li>{{ form_row(tag.attributes) }}</li>
-    <li>{{ form_row(tag.frais) }}</li>
-    <li>{{ form_row(tag.heureFraisPose) }}</li>
-    <li>{{ form_row(tag.heureFraisMaquette) }}</li>
-{% endfor %}
-</ul>
+<div class="row">
+    <div class="col-md-6">
+        {{ form_label(form.numDevis) }}
+        {{ form_widget(form.numDevis) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_label(form.modeReglement) }}
+        {{ form_widget(form.modeReglement) }}
+    </div>
+</div>
 
 
-    <button class="btn">{{ button_label|default('Save') }}</button>
+{% include '/devis/productsform.html.twig' %}
+
+    <button class="btn btn-success mt-3">{{ button_label|default('Enregistrer') }}</button>
+<a class="btn btn-warning mt-3" href="{{ path('devis_index') }}"><i class="text-light fa fa-arrow-left"></i></a>
 {{ form_end(form) }}

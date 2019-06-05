@@ -1,28 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Attributes index{% endblock %}
+{% block title %}Liste des attributs{% endblock %}
 
 {% block body %}
-    <h1>Attributes index</h1>
+    <h1>Liste des attributs</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>actions</th>
+                <th>Nom de l'attribut</th>
+                <th>Prix</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for attribute in attributes %}
             <tr>
-                <td>{{ attribute.id }}</td>
                 <td>{{ attribute.name }}</td>
                 <td>{{ attribute.price }}</td>
                 <td>
-                    <a href="{{ path('attributes_show', {'id': attribute.id}) }}">show</a>
-                    <a href="{{ path('attributes_edit', {'id': attribute.id}) }}">edit</a>
+                    <a href="{{ path('attributes_show', {'id': attribute.id}) }}" class="btn btn-primary"><i class="fa fa-eye text-light"></i></a>
+                    <a href="{{ path('attributes_edit', {'id': attribute.id}) }}" class="btn btn-warning"><i class="fa fa-edit text-light"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('attributes_new') }}">Create new</a>
+    <a href="{{ path('attributes_new') }}" class="btn btn-success"><i class="fa fa-plus"></i></a>
 {% endblock %}

@@ -1,26 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Categories{% endblock %}
+{% block title %}Catégorie{% endblock %}
 
 {% block body %}
-    <h1>Categories</h1>
+    <h1>Catégorie</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ category.id }}</td>
+                <th>Nom de la catégorie</th>
+                <td>{{ category.name }}</td>
             </tr>
             <tr>
-                <th>Name</th>
-                <td>{{ category.name }}</td>
+                <th>Catégories enfants</th>
+                <td>{% for cat in category.children %} {{ cat.name }} {% endfor %}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('categories_index') }}">back to list</a>
+    <div class="d-flex">
+        <a href="{{ path('categories_index') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i></a>
 
-    <a href="{{ path('categories_edit', {'id': category.id}) }}">edit</a>
+        <a href="{{ path('categories_edit', {'id': category.id}) }}" class="btn btn-warning ml-1"><i class="fa fa-edit text-light"></i></a>
 
-    {{ include('categories/_delete_form.html.twig') }}
+        {{ include('categories/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

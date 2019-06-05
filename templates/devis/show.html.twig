@@ -7,93 +7,39 @@
 
     <table class="table">
         <tbody>
+        <tr>
+            <th>Numéro de devis</th>
+            <td>{{ devi.numDevis }}</td>
+        </tr>
             <tr>
-                <th>Id</th>
-                <td>{{ devi.id }}</td>
-            </tr>
-            <tr>
-                <th>ModeReglement</th>
+                <th>Mode de règlement</th>
                 <td>{{ devi.modeReglement }}</td>
             </tr>
-            <tr>
-                <th>NumDevis</th>
-                <td>{{ devi.numDevis }}</td>
-            </tr>
-            <tr>
-                <th>DateCrea</th>
-                <td>{{ devi.dateCrea ? devi.dateCrea|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>DateValid</th>
-                <td>{{ devi.dateValid ? devi.dateValid|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <!--
-            <tr>
-                <th>Products</th>
-                <td><ul>
-                        {% set HT =0 %}
 
-                        {% for pdts in devi.productForms %}
-
-                            {{ (pdts.name.price * ((pdts.height * pdts.width)/100)) }}
-                            {% set HT = HT + (pdts.name.price * ((pdts.height * pdts.width)/100)) %}
-                        <li>{{ pdts.name.name }} {{ pdts.width }} x {{ pdts.height }}cm</li>
-                        {% endfor %}
-                    </ul>
-                </td>
+            <tr>
+                <th>Date de création</th>
+                <td>{{ devi.dateCrea ? devi.dateCrea|date('Y-m-d H:i') : '' }}</td>
             </tr>
             <tr>
-                <th>Attributes</th>
-                <td>
-                    {% for pdts in devi.productForms %}
-                    {% for pdt in pdts.attributes %}
-
-                        {{ pdt.name }}
-                        {% set HT = HT + (pdt.price * ((pdts.height * pdts.width)/100)) %}
-                    {% endfor %}
-                    {% endfor %}
-                </td>
+                <th>Date de validité</th>
+                <td>{{ devi.dateValid ? devi.dateValid|date('Y-m-d H:i') : '' }}</td>
             </tr>
-            <tr>
-                <th>Frais</th>
-                <td>
-                    {% for pdts in devi.productForms %}
-                        {% for frais in pdts.frais %}
-                        {{ frais.nom }}
-                            {% set HT = HT + frais.price %}
-                            {{ frais.price }}
-                        {% endfor %}
-                    {% endfor %}
-                </td>
-            </tr>
-            <tr>
-                <th>HT</th>
-                <td>
-                    {{ HT }}
-                </td>
-            </tr>
-        <tr>
-            <th>TTC</th>
-            <td>
-                {% set ttc = HT * 1.085 %}
-                {{ ttc }}
-            </td>
-        </tr>
-            -->
         </tbody>
     </table>
     <h1>Produits</h1>
-<table class="table">
+<table class="table table-responsive">
     <tr>
         <th>Nom du produit</th>
         <th>Dimensions</th>
         <th>Qté</th>
-        <th>Frais</th>
+        <th>Heures de frais de pose</th>
+        <th>Heures de frais de maquette</th>
         <th>attributs</th>
         <th>Prix HT</th>
         <th>Prix TTC</th>
     </tr>
-    {% set TotalPrice = 0 %}
+    {% set TotalPriceTTC = 0 %}
+    {% set TotalPriceHT = 0 %}
     {% for pdts in devi.productForms %}
         {% set HT = 0 %}
         {% set TTC = 0 %}
@@ -101,9 +47,15 @@
             <td>{{ pdts.name }}</td>
             <td>{{ pdts.width }} x {{ pdts.height }} (cm)</td>
             <td>{{ pdts.qte }}</td>
-            <td>{% for frais in pdts.frais %}
-                    <span>{{ frais.nom }}</span>
-                {% endfor %}</td>
+            <td>
+                {{ pdts.heureFraisPose }}
+                {% set HT = HT+ (pdts.heureFraisPose*45) %}
+            </td>
+            <td>
+
+                {% set HT = HT+ (pdts.heureFraisMaquette*90) %}
+                {{ pdts.heureFraisMaquette }}
+            </td>
             <td>
                 {% for attr in pdts.attributes %}
                     <span>{{ attr.name }}</span>
@@ -112,9 +64,9 @@
             <td>
 
                 {% for attr in pdts.attributes %}
-                    {% set HT = HT + attr.price * ((pdts.width*pdts.height)/1000) %}
+                    {% set HT = HT + (attr.price * ((pdts.width*pdts.height)/10000)) %}
                 {% endfor %}
-                {% set HT = HT + pdts.name.price * ((pdts.width*pdts.height)/1000) %}
+                {% set HT = HT + (pdts.name.price * ((pdts.width*pdts.height)/10000)) %}
                 {% set HT = HT* pdts.qte %}
                 {{ HT|round(2) }} €
             </td>
@@ -123,13 +75,61 @@
                 {{ TTC|round(2) }} €
             </td>
         </tr>
-        {% set TotalPrice = TotalPrice + TTC%}
+        {% set TotalPriceHT = TotalPriceHT + HT %}
+        {% set TotalPriceTTC = TotalPriceTTC + TTC %}
     {% endfor %}
 </table>
-{{ TotalPrice|round(2) }} €
-    <a href="{{ path('devis_index') }}">back to list</a>
+    <div class="d-flex justify-content-between">
+        <div>
+            <p>Prix Total HT</p>
+            <p>{{ TotalPriceHT|round(2) }} €</p>
+        </div>
+        <div>
+            <p>Prix Total TTC</p>
+            <p>{{ TotalPriceTTC|round(2) }} €</p>
+        </div>
+    </div>
+    <h1>Commentaires</h1>
+    {% for com in devi.commentaires %}
+        <div class="card">
+            <div class="card-header">
+                {{ com.date }}
+            </div>
+            <div class="card-body">
+                {{ com.text }}
+            </div>
+        </div>
 
-    <a href="{{ path('devis_edit', {'id': devi.id}) }}">edit</a>
+        {% else %}
+        <p>Aucun commentaire</p>
+    {% endfor %}
+    <h3>Ajouter un commentaire</h3>
+    <form action="">
+        <div class="form-group">
+            <textarea name="" id="" class="com form-control" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="button" value="Envoyer" class="submitPost btn btn-success">
+        </div>
+    </form>
+<div class="d-flex justify-content-center align-items-end">
+    <a href="{{ path('devis_index') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i></a>
 
+    <a href="{{ path('devis_edit', {'id': devi.id}) }}" class="btn btn-warning text-light ml-1"><i class="fa fa-edit"></i></a>
     {{ include('devis/_delete_form.html.twig') }}
+</div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('.submitPost').click(function () {
+            let com = $('.com').val();
+            $.post('PostCom',{com:com}, function (success) {
+                console.log(success)
+            })
+        })
+    </script>
 {% endblock %}

@@ -1,12 +1,12 @@
 var $collectionHolder;
 
 // setup an "add a tag" link
-var $addTagButton = $('<button type="button" class="add_tag_link">Add a tag</button>');
-var $newLinkLi = $('<li></li>').append($addTagButton);
+var $addTagButton = $('<button type="button" class="mt-3 add_tag_link btn btn-success">Ajouter un produit</button>');
+var $newLinkLi = $('<div></div>').append($addTagButton);
 
 jQuery(document).ready(function() {
     // Get the ul that holds the collection of tags
-    $collectionHolder = $('ul.tags');
+    $collectionHolder = $('.tags');
 
     // add the "add a tag" anchor and li to the tags ul
     $collectionHolder.append($newLinkLi);
@@ -38,18 +38,19 @@ function addTagForm($collectionHolder, $newLinkLi) {
     // instead be a number based on how many items we have
     newForm = newForm.replace(/__name__/g, index);
 
+    console.log(newForm);
     // increase the index with one for the next item
     $collectionHolder.data('index', index + 1);
 
     // Display the form in the page in an li, before the "Add a tag" link li
-    var $newFormLi = $('<li></li>').append(newForm);
+    var $newFormLi = $('<div class="mt-5"></div>').append(newForm);
     $newLinkLi.before($newFormLi);
 
     addTagFormDeleteLink($newFormLi);
 }
 
 function addTagFormDeleteLink($tagFormLi) {
-    var $removeFormButton = $('<button type="button">Delete this tag</button>');
+    var $removeFormButton = $('<button type="button" class=" mt-3 btn btn-danger">Supprimer</button>');
     $tagFormLi.append($removeFormButton);
 
     $removeFormButton.on('click', function(e) {

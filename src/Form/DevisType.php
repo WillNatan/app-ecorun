@@ -17,10 +17,11 @@ class DevisType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('modeReglement', TextType::class)
-            ->add('numDevis', TextType::class, ['disabled'=>true])
-            ->add('productForms',CollectionType::class, [
+            ->add('modeReglement', TextType::class, ['label'=>'Mode de règlement','attr'=>['class'=>'form-control']])
+            ->add('numDevis', TextType::class, ['label'=>'Numéro de devis','disabled'=>true, 'attr'=>['class'=>'form-control']])
+            ->add('productForms',CollectionType::class, ['label'=>'Produits','attr'=>['class'=>'form-control'],
         'entry_type' => ProductFormType::class,
+
         'entry_options' => ['label' => false],
                 'allow_add' => true,
                 'by_reference' => false,

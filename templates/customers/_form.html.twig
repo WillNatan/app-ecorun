@@ -1,4 +1,5 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <button class="btn btn btn-success mt-3">{{ button_label|default('Enregistrer') }}</button>
+<a href="{{ path('customers_index') }}" class="btn btn-primary mt-3"><i class="fa fa-arrow-left"></i></a>
 {{ form_end(form) }}

@@ -49,12 +49,6 @@ class ProductForm
     private $attributes;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Frais", inversedBy="product", cascade={"persist"}, orphanRemoval=true)
-     * @ORM\JoinTable(name="frais_product")
-     */
-    private $frais;
-
-    /**
      * @ORM\Column(type="float", nullable=true)
      */
     private $heureFraisPose;
@@ -72,7 +66,6 @@ class ProductForm
     public function __construct()
     {
         $this->attributes = new ArrayCollection();
-        $this->frais = new ArrayCollection();
     }
 
 
@@ -152,32 +145,6 @@ class ProductForm
         if ($this->attributes->contains($attribute)) {
             $this->attributes->removeElement($attribute);
             $attribute->removeLinkedproduct($this);
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Frais[]
-     */
-    public function getFrais(): Collection
-    {
-        return $this->frais;
-    }
-
-    public function addFrai(Frais $frai): self
-    {
-        if (!$this->frais->contains($frai)) {
-            $this->frais[] = $frai;
-        }
-
-        return $this;
-    }
-
-    public function removeFrai(Frais $frai): self
-    {
-        if ($this->frais->contains($frai)) {
-            $this->frais->removeElement($frai);
         }
 
         return $this;

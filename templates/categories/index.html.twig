@@ -1,28 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Categories index{% endblock %}
+{% block title %}Liste des catégories{% endblock %}
 
 {% block body %}
-    <h1>Categories index</h1>
+    <h1>Liste des catégories</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
-                <th>Children</th>
-                <th>actions</th>
+                <th>Catégories enfants</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for category in categories %}
             <tr>
-                <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>{% for children in category.children %}{{ children.name }}{% if loop.index %}{% if loop.last %}{% else %},{% endif %}{% endif %}{% endfor %}</td>
                 <td>
-                    <a href="{{ path('categories_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('categories_edit', {'id': category.id}) }}">edit</a>
+                    <div class="d-flex"><a href="{{ path('categories_show', {'id': category.id}) }}" class="btn btn-primary"><i class="fa fa-eye text-light"></i></a>
+                        <a href="{{ path('categories_edit', {'id': category.id}) }}" class="btn btn-warning ml-1"><i class="fa fa-edit text-light"></i></a></div>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('categories_new') }}">Create new</a>
+    <a href="{{ path('categories_new') }}" class="btn btn-success mt-3"><i class="fa fa-plus"></i></a>
 {% endblock %}

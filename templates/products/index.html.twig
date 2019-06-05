@@ -1,28 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Products index{% endblock %}
+{% block title %}Liste des produits{% endblock %}
 
 {% block body %}
-    <h1>Products index</h1>
+    <h1>Liste des produits</h1>
 
-    <table class="table">
+    <table class="table table-responsive">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>actions</th>
+                <th>Nom du produit</th>
+                <th>Prix</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for product in products %}
             <tr>
-                <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>
-                    <a href="{{ path('products_show', {'id': product.id}) }}">show</a>
-                    <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>
+                    <a href="{{ path('products_show', {'id': product.id}) }}" class="btn btn-primary"><i class="fa fa-eye text-light"></i></a>
+                    <a href="{{ path('products_edit', {'id': product.id}) }}" class="btn btn-warning"><i class="fa fa-edit text-light"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('products_new') }}">Create new</a>
+    <a href="{{ path('products_new') }}" class="btn btn-success"><i class="fa fa-plus"></i></a>
 {% endblock %}

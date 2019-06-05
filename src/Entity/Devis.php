@@ -48,9 +48,15 @@ class Devis
      */
     private $productForms;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commentaires", mappedBy="Devis")
+     */
+    private $commentaires;
+
     public function __construct()
     {
         $this->productForms = new ArrayCollection();
+        $this->commentaires = new ArrayCollection();
     }
 
 
@@ -145,6 +151,37 @@ class Devis
             // set the owning side to null (unless already changed)
             if ($productForm->getDevis() === $this) {
                 $productForm->setDevis(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Commentaires[]
+     */
+    public function getCommentaires(): Collection
+    {
+        return $this->commentaires;
+    }
+
+    public function addCommentaire(Commentaires $commentaire): self
+    {
+        if (!$this->commentaires->contains($commentaire)) {
+            $this->commentaires[] = $commentaire;
+            $commentaire->setDevis($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaire(Commentaires $commentaire): self
+    {
+        if ($this->commentaires->contains($commentaire)) {
+            $this->commentaires->removeElement($commentaire);
+            // set the owning side to null (unless already changed)
+            if ($commentaire->getDevis() === $this) {
+                $commentaire->setDevis(null);
             }
         }
 

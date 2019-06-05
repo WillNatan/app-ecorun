@@ -8,6 +8,7 @@ use App\Entity\ProductForm;
 use App\Entity\SelectBox;
 use App\Form\DevisType;
 use App\Repository\CategoriesRepository;
+use App\Repository\CommentairesRepository;
 use App\Repository\DevisRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -35,6 +36,7 @@ class DevisController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/new", name="devis_new", methods={"GET","POST"})
      */
@@ -45,8 +47,6 @@ class DevisController extends AbstractController
         $devi->addProductForm($pdts);
         $entityManager = $this->getDoctrine()->getManager();
         $originalTags = new ArrayCollection();
-        $originalAttr = new ArrayCollection();
-
 
 
         foreach ($devi->getProductForms() as $pdt){
@@ -76,6 +76,7 @@ class DevisController extends AbstractController
             $devi->setDateCrea(new \DateTime());
             $devi->setDateValid(new \DateTime('+1 month'));
             $entityManager->persist($devi);
+            $entityManager->persist($pdts);
             $entityManager->flush();
 
             return $this->redirectToRoute('devis_index');
@@ -90,10 +91,12 @@ class DevisController extends AbstractController
     /**
      * @Route("/{id}", name="devis_show", methods={"GET"})
      */
-    public function show(Devis $devi): Response
+    public function show(Devis $devi, Request $request): Response
     {
+
+
         return $this->render('devis/show.html.twig', [
-            'devi' => $devi,
+            'devi' => $devi
         ]);
     }
 

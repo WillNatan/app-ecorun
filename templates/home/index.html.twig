@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Encre.re - Works{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-3">
+        <div class="box-content">
+            <a class="text-light" href="{{ path('devis_new') }}">Nouveau devis</a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="box-content">
+            <a class="text-light" href="{{ path('customers_new') }}">Nouveau client</a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="box-content">
+            <a class="text-light" href="{{ path('products_new') }}">Nouveau produit</a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="box-content">
+            <a class="text-light" href="{{ path('attributes_new') }}">Nouvel attribut</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

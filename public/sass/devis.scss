@@ -1,0 +1,35 @@
+// Variables
+$background : url('../img/art-backdrop-background-1927507.jpg') no-repeat fixed;
+$main-wrapper: white;
+
+body{
+  background: $background;
+  object-fit: cover;
+  background-size: cover;
+}
+
+
+.main-wrapper{
+  border-radius: 3px;
+  background: $main-wrapper;
+  padding:15px;
+}
+
+.box-content{
+  background: lightcoral;
+  color:white;
+  padding:25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px 0;
+}
+
+.box-content p{
+  margin:0;
+}
+
+.product-list{
+  padding:25px;
+}

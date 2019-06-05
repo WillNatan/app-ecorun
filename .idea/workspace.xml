@@ -2,7 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="931fb782-62cc-4a3d-bfae-0f3ffbd0a9c4" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/devis.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/getProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/getProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BlaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BloController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DevisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DevisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FraisController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SocieteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SocieteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bla.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Blo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Devis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Devis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Frais.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ProductForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProductForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AttributesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AttributesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BlaType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BloType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoriesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoriesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CustomersType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CustomersType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/DevisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DevisType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FraisType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SocieteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SocieteType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BlaRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BloRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/FraisRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attributes/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attributes/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attributes/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attributes/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attributes/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attributes/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attributes/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bla/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bla/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bla/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bla/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bla/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bla/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blo/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blo/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blo/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blo/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blo/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blo/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devis/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devis/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devis/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devis/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devis/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devis/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devis/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frais/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frais/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frais/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frais/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frais/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frais/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/show.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,73 +99,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/ProductFormType.php">
+        <entry file="file://$PROJECT_DIR$/templates/devis/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Frais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-              <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="603">
+              <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/devis/show.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="125" column="46" lean-forward="true" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Attributes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-              <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/ProductForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2524">
-              <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
-              <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/devis/_form.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="467">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -95,6 +121,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>test</find>
+      <find>newFormLi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,34 +130,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Form/CategoriesType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Categories.php" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/public/js/app.js" />
-        <option value="$PROJECT_DIR$/src/SelectBox.php" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/src/Form/ProductsFormType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/ProductsForm.php" />
-        <option value="$PROJECT_DIR$/templates/devis/new.html.twig" />
-        <option value="$PROJECT_DIR$/public/js/getProducts.js" />
-        <option value="$PROJECT_DIR$/templates/devis/edit.html.twig" />
-        <option value="$PROJECT_DIR$/templates/products/show.html.twig" />
-        <option value="$PROJECT_DIR$/templates/product_form/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/Repository/ProductsRepository.php" />
-        <option value="$PROJECT_DIR$/src/Form/ProductsType.php" />
-        <option value="$PROJECT_DIR$/templates/categories/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/DevisType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Devis.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Products.php" />
-        <option value="$PROJECT_DIR$/src/Entity/ProductForm.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Attributes.php" />
-        <option value="$PROJECT_DIR$/src/Form/AttributesType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Form/ProductFormType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/DevisController.php" />
+        <option value="$PROJECT_DIR$/public/sass/devis.scss" />
+        <option value="$PROJECT_DIR$/templates/devis/productsform.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/DevisType.php" />
+        <option value="$PROJECT_DIR$/public/js/getProducts.js" />
+        <option value="$PROJECT_DIR$/templates/devis/new.html.twig" />
+        <option value="$PROJECT_DIR$/templates/home/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/devis/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/customers/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/CustomersType.php" />
+        <option value="$PROJECT_DIR$/templates/customers/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/products/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/ProductsType.php" />
+        <option value="$PROJECT_DIR$/templates/products/new.html.twig" />
+        <option value="$PROJECT_DIR$/templates/products/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/products/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/products/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/attributes/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/attributes/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/attributes/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/AttributesType.php" />
         <option value="$PROJECT_DIR$/templates/devis/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/devis/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/customers/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/customers/new.html.twig" />
+        <option value="$PROJECT_DIR$/templates/customers/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/devis/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/products/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/customers/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/attributes/new.html.twig" />
+        <option value="$PROJECT_DIR$/templates/attributes/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/attributes/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/templates/categories/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/categories/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/categories/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/categories/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/categories/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/CategoriesType.php" />
+        <option value="$PROJECT_DIR$/src/Form/SocieteType.php" />
+        <option value="$PROJECT_DIR$/templates/societe/new.html.twig" />
+        <option value="$PROJECT_DIR$/templates/societe/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/societe/_delete_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/societe/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/SocieteController.php" />
+        <option value="$PROJECT_DIR$/templates/societe/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Commentaires.php" />
+        <option value="$PROJECT_DIR$/templates/societe/show.html.twig" />
         <option value="$PROJECT_DIR$/templates/devis/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/DevisController.php" />
       </list>
     </option>
   </component>
@@ -263,13 +313,7 @@
             <path>
               <item name="app-ecorun" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-ecorun" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app-ecorun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="app-ecorun" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="devis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -280,17 +324,20 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\devis\src\Entity" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\app-ecorun\public\js" />
+      <recent name="C:\laragon\www\app-ecorun\public\img" />
       <recent name="C:\laragon\www\devis\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\app-ecorun\public\img" />
+      <recent name="C:\laragon\www\devis\src\Entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -321,6 +368,10 @@
       <workItem from="1559137614318" duration="13175000" />
       <workItem from="1559190985840" duration="7985000" />
       <workItem from="1559277012047" duration="1533000" />
+      <workItem from="1559538608473" duration="18227000" />
+      <workItem from="1559626129674" duration="1200000" />
+      <workItem from="1559635121760" duration="1213000" />
+      <workItem from="1559729376194" duration="6923000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1559278136252</created>
@@ -329,21 +380,29 @@
       <option name="project" value="LOCAL" />
       <updated>1559278136252</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Default Changelist">
+      <created>1559307650503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559307650503</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41449000" />
+    <option name="totallyTimeSpent" value="69045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,21 +419,21 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -390,223 +449,390 @@
     <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductsController.php">
+    <entry file="file://$PROJECT_DIR$/src/Form/ProductFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="629">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jQuery.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Categories.php">
+    <entry file="file://$PROJECT_DIR$/public/sass/devis.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/SelectBox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ProductsFormType.php" />
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductsFormController.php" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/ProductsForm.php" />
-    <entry file="file://$PROJECT_DIR$/templates/products_form/index.html.twig" />
-    <entry file="file://$PROJECT_DIR$/templates/devis/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="561">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/getProducts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/devis/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/devis/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="623">
+          <caret line="52" column="91" selection-start-line="52" selection-start-column="91" selection-end-line="52" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/CustomersType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/CategoriesType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="42" selection-start-line="16" selection-start-column="26" selection-end-line="21" selection-end-column="42" />
+        <state relative-caret-position="272">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customers/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="96" />
+          <folding>
+            <element signature="e#560#573#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="85" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ProductsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/attributes/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="137" selection-start-line="22" selection-start-column="137" selection-end-line="22" selection-end-column="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/products/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/product_form/show.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/Form/ProductsType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/ProductsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="33" column="25" selection-start-line="32" selection-start-column="12" selection-end-line="33" selection-end-column="25" />
+          <caret line="31" column="93" selection-start-line="31" selection-start-column="93" selection-end-line="31" selection-end-column="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Devis.php">
+    <entry file="file://$PROJECT_DIR$/templates/products/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categories/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="126" selection-start-line="21" selection-start-column="126" selection-end-line="21" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductFormController.php" />
-    <entry file="file://$PROJECT_DIR$/src/Controller/AttributesController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/ProductForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2524">
-          <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/DevisType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Attributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ProductFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-          <folding>
-            <element signature="e#34#60#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/AttributesType.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="95" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/attributes/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#37#54#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/attributes/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/devis/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/devis/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#37#49#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customers/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="e#37#53#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customers/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customers/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="e#37#52#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/devis/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customers/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="95" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/attributes/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/attributes/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/attributes/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customers/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="e#37#54#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+          <folding>
+            <element signature="e#1870#1886#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/devis/productsform.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/devis/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/devis/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" selection-start-line="9" selection-start-column="4" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/SocieteType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/CategoriesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/societe/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/societe/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Societe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/societe/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="e#37#51#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SocieteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+          <folding>
+            <element signature="e#953#968#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/societe/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/societe/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#226#238#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/societe/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commentaires.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/DevisType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/devis/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="125" column="46" lean-forward="true" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
+        <state relative-caret-position="603">
+          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DevisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
         </state>
       </provider>
     </entry>

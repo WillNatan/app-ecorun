@@ -1,0 +1,7 @@
+<div class="product-list">
+    <div class="tags " data-prototype="{{ form_widget(form.productForms.vars.prototype)|e('html_attr') }}">
+        {% for tag in form.productForms %}
+            {{ form_row(tag) }}
+        {% endfor %}
+    </div>
+</div>

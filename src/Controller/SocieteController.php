@@ -28,24 +28,28 @@ class SocieteController extends AbstractController
     /**
      * @Route("/new", name="societe_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, SocieteRepository $societeRepository): Response
     {
-        $societe = new Societe();
-        $form = $this->createForm(SocieteType::class, $societe);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($societe);
-            $entityManager->flush();
-
+        if(!empty($societeRepository)){
             return $this->redirectToRoute('societe_index');
-        }
+        }else{
+            $societe = new Societe();
+            $form = $this->createForm(SocieteType::class, $societe);
+            $form->handleRequest($request);
 
-        return $this->render('societe/new.html.twig', [
-            'societe' => $societe,
-            'form' => $form->createView(),
-        ]);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($societe);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('societe_index');
+            }
+
+            return $this->render('societe/new.html.twig', [
+                'societe' => $societe,
+                'form' => $form->createView(),
+            ]);
+        }
     }
 
     /**
