@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * @Route("/societe")
+ * @Route("admin/societe")
  */
 class SocieteController extends AbstractController
 {

@@ -23,7 +23,7 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
 /**
- * @Route("/devis")
+ * @Route("admin/devis")
  */
 class DevisController extends AbstractController
 {
