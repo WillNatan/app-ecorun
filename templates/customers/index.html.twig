@@ -13,9 +13,10 @@
                     </td>
                 </tr>
             </table>
+            {% else %}
+            <p>Aucun client</p>
         {% endfor %}
-        </tbody>
-    </table>
+
 
     <a class="btn btn-primary" href="{{ path('customers_new') }}"><i class="fa fa-plus"></i></a>
 {% endblock %}

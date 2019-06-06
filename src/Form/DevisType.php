@@ -17,6 +17,12 @@ class DevisType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('customer', EntityType::class,  ['label'=>'Nom du client', 'attr'=>['class'=>'form-control'],'required'=>false,'placeholder' => 'Client',
+                // looks for choices from this entity
+                'class' => Customers::class,
+
+                // uses the User.username property as the visible option string
+                'choice_label' => 'name'])
             ->add('modeReglement', TextType::class, ['label'=>'Mode de règlement','attr'=>['class'=>'form-control']])
             ->add('numDevis', TextType::class, ['label'=>'Numéro de devis','disabled'=>true, 'attr'=>['class'=>'form-control']])
             ->add('productForms',CollectionType::class, ['label'=>'Produits','attr'=>['class'=>'form-control'],

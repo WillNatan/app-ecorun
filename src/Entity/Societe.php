@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SocieteRepository")
@@ -18,6 +19,7 @@ class Societe
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\File(mimeTypes={ "image/*" })
      */
     private $logo;
 
@@ -56,12 +58,12 @@ class Societe
         return $this->id;
     }
 
-    public function getLogo(): ?string
+    public function getLogo()
     {
         return $this->logo;
     }
 
-    public function setLogo(string $logo): self
+    public function setLogo($logo): self
     {
         $this->logo = $logo;
 
