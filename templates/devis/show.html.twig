@@ -90,10 +90,13 @@
         </div>
     </div>
     <h1>Commentaires</h1>
+    {% if app.user %}
     {% for com in devi.commentaires %}
         <div class="card mb-3">
             <div class="card-header">
-                {{ com.date ? com.date|date('Y-m-d H:i') : '' }}
+                <i class="float-right fa fa-times deleteCom" data-id="{{ com.id }}" data-devis="{{ devi.id }}" style="color:red"></i>
+                <h2 style="font-size: 11px;">{{ com.user.email }}</h2>
+                <h4 style="font-size: 11px;">{{ com.date ? com.date|date('Y-m-d H:i') : '' }}</h4>
             </div>
             <div class="card-body">
                 <p>Commentaire</p>
@@ -101,7 +104,7 @@
             </div>
         </div>
 
-        {% else %}
+    {% else %}
         <p>Aucun commentaire</p>
     {% endfor %}
     <h3>Ajouter un commentaire</h3>
@@ -114,6 +117,8 @@
             <input type="submit" value="Envoyer" class="submitPost btn btn-success">
         </div>
     </form>
+    {% else %}
+    <a href="{{ path('app_login') }}" class="btn btn-success">Veuillez vous connecter</a>
 <div class="d-flex justify-content-center align-items-end">
     <a href="{{ path('devis_index') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i></a>
 
@@ -121,6 +126,16 @@
     {{ include('devis/_delete_form.html.twig') }}
 </div>
 
+{% endif %}
 
+{% endblock %}
 
+{% block javascripts %}
+    <script>
+        $('.deleteCom').click(function () {
+            $.post('{{ path('deleteCom') }}', {id:$(this).data('id')}, function (success) {
+                location.reload();
+            })
+        })
+    </script>
 {% endblock %}

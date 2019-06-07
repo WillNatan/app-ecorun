@@ -31,6 +31,11 @@ class Commentaires
      */
     private $Devis;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="commentaires")
+     */
+    private $user;
+
 
     public function getId(): ?int
     {
@@ -69,6 +74,18 @@ class Commentaires
     public function setDevis(?Devis $Devis): self
     {
         $this->Devis = $Devis;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

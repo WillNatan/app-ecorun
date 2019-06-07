@@ -38,6 +38,23 @@ class DevisController extends AbstractController
     }
 
     /**
+     * @Route("/deleteId", name="deleteCom", methods={"POST"})
+     */
+    public function deleteCom(Request $request,DevisRepository $devisRepository, CommentairesRepository $commentairesRepository): Response
+    {
+        $comID = $request->get('id');
+
+        $com=$commentairesRepository->findOneBy(['id'=>$comID]);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($com);
+        $em->flush();
+
+        return new JsonResponse($comID);
+    }
+
+
+    /**
      * @Route("/PostCom", name="postCom", methods={"GET","POST"})
      */
     public function postCom(Request $request,DevisRepository $devisRepository, CommentairesRepository $commentairesRepository): Response
@@ -51,6 +68,7 @@ class DevisController extends AbstractController
            $commentaire->setDate(new \Datetime());
            $commentaire->setText($com);
            $commentaire->setDevis($currentDevis);
+           $commentaire->setUser($this->getUser());
            $em = $this->getDoctrine()->getManager();
            $em->persist($commentaire);
            $em->flush();
